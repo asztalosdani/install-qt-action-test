@@ -10,11 +10,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.CI_TOKEN }}
-          submodules: true
-          lfs: true
 
       # if this action fails with "Specified target combination is not valid" error, try running aqt locally,
       # using `aqt list-tool windows desktop tools_ifw` and checking the version number.
