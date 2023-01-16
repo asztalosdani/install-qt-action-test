@@ -15,10 +15,10 @@ jobs:
       # using `aqt list-tool windows desktop tools_ifw` and checking the version number.
       # For more info see https://aqtinstall.readthedocs.io/en/latest/getting_started.html#installing-tools
       - name: Install Qt
-        uses: jurplel/install-qt-action@v2
+        uses: jurplel/install-qt-action@v3
         with:
           version: '5.15.2'
-          tools: 'tools_ifw,4.5.1,qt.tools.ifw.45'
+          tools: 'tools_ifw,qt.tools.ifw.45'
           tools-only: 'true'
 
       - name: Add Qt tools to PATH
