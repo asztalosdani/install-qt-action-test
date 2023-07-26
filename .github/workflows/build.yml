@@ -24,6 +24,7 @@ jobs:
           version: '5.15.2'
           tools: 'tools_ifw'
           tools-only: 'true'
+          setup-python: false
 
       - name: Check python version
         shell: cmd
