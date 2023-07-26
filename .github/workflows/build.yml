@@ -22,7 +22,7 @@ jobs:
         uses: jurplel/install-qt-action@v3
         with:
           version: '5.15.2'
-          tools: 'tools_ifw,qt.tools.ifw.45'
+          tools: 'tools_ifw'
           tools-only: 'true'
 
       - name: Check python version
