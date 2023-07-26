@@ -10,6 +10,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Install python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8.6'
 
       # if this action fails with "Specified target combination is not valid" error, try running aqt locally,
       # using `aqt list-tool windows desktop tools_ifw` and checking the version number.
@@ -20,6 +24,10 @@ jobs:
           version: '5.15.2'
           tools: 'tools_ifw,qt.tools.ifw.45'
           tools-only: 'true'
+
+      - name: Check python version
+        shell: cmd
+        run: python -c "import sys;print(sys.version)"
 
       - name: Add Qt tools to PATH
         run: Add-Content $env:GITHUB_PATH $env:IQTA_TOOLS\QtInstallerFramework\4.5\bin
